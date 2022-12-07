@@ -27,7 +27,7 @@ export class AddComponent {
         if(response.status=="success")
         {
           alert("added")
-          this.name="",this.price="",this.description="",this.description="",this.image="",this.category=""
+          this.name="",this.price="",this.description="",this.image="",this.category=""
         }
         else
         {
