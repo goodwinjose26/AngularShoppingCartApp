@@ -12,7 +12,7 @@ export class ApiService {
   {
     return this.http.post("http://localhost:8080/add",datatosend)
   }
-  viewemployee =()=>
+  viewproduct =()=>
   {
     return this.http.get("http://localhost:8080/view")
   }
