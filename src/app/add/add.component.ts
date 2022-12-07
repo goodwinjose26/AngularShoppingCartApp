@@ -16,11 +16,11 @@ export class AddComponent {
 
   constructor(private api:ApiService) {}
 
-  addemployee=()=>
+  addproduct=()=>
   {
     let data:any={"name":this.name,"price":this.price,"description":this.description,"image":this.image,"category":this.category}
     console.log(data)
-    this.api.addemployee(data).subscribe(
+    this.api.addproduct(data).subscribe(
       (response:any)=>
       {
         console.log(response)

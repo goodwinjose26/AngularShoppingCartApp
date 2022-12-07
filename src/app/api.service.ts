@@ -8,7 +8,7 @@ export class ApiService {
 
 
   constructor(private http:HttpClient) { }
-  addemployee=(datatosend:any)=>
+  addproduct=(datatosend:any)=>
   {
     return this.http.post("http://localhost:8080/add",datatosend)
   }
