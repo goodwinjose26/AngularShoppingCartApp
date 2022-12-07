@@ -8,7 +8,8 @@ import { AdminloginComponent } from './adminlogin/adminlogin.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { Navbar1Component } from './navbar1/navbar1.component'
+import { Navbar1Component } from './navbar1/navbar1.component';
+import { ViewComponent } from './view/view.component'
 const myRoute:Routes=[
   {
     path:"",
@@ -17,6 +18,10 @@ const myRoute:Routes=[
   {
     path:"add",
     component:AddComponent
+  },
+  {
+    path:"view",
+    component:ViewComponent
   }
 ]
 @NgModule({
@@ -24,7 +29,8 @@ const myRoute:Routes=[
     AppComponent,
     AddComponent,
     AdminloginComponent,
-    Navbar1Component
+    Navbar1Component,
+    ViewComponent
   ],
   imports: [
     BrowserModule,
