@@ -10,7 +10,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { Navbar1Component } from './navbar1/navbar1.component';
 import { ViewComponent } from './view/view.component';
-import { SearchComponent } from './search/search.component'
+import { SearchComponent } from './search/search.component';
+import { UserloginComponent } from './userlogin/userlogin.component'
 const myRoute:Routes=[
   {
     path:"",
@@ -27,6 +28,10 @@ const myRoute:Routes=[
   {
     path:"search",
     component:SearchComponent
+  },
+  {
+    path:"userlogin",
+    component:UserloginComponent
   }
 ]
 @NgModule({
@@ -36,7 +41,8 @@ const myRoute:Routes=[
     AdminloginComponent,
     Navbar1Component,
     ViewComponent,
-    SearchComponent
+    SearchComponent,
+    UserloginComponent
   ],
   imports: [
     BrowserModule,
