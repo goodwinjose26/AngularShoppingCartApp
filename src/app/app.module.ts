@@ -11,7 +11,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { Navbar1Component } from './navbar1/navbar1.component';
 import { ViewComponent } from './view/view.component';
 import { SearchComponent } from './search/search.component';
-import { UserloginComponent } from './userlogin/userlogin.component'
+import { UserloginComponent } from './userlogin/userlogin.component';
+import { RegistrationComponent } from './registration/registration.component'
 const myRoute:Routes=[
   {
     path:"",
@@ -32,6 +33,10 @@ const myRoute:Routes=[
   {
     path:"userlogin",
     component:UserloginComponent
+  },
+  {
+    path:"registration",
+    component:RegistrationComponent
   }
 ]
 @NgModule({
@@ -42,7 +47,8 @@ const myRoute:Routes=[
     Navbar1Component,
     ViewComponent,
     SearchComponent,
-    UserloginComponent
+    UserloginComponent,
+    RegistrationComponent
   ],
   imports: [
     BrowserModule,
