@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-userlogin',
@@ -8,24 +9,34 @@ import { Router } from '@angular/router';
 })
 export class UserloginComponent {
 
-
+  constructor(private api:ApiService) {}
   username=""
   password=""
-constructor(private route:Router){}
+  searchdata:any=[]
   loginValues=()=>
   {
-    let data:any=
-    {
+    let data:any={
       "username":this.username,"password":this.password
     }
-    console.log(data)
-
-    if (this.username=="admin" && this.password=="1234") {
-this.route.navigate(["/add"])      
-    } else {
-      alert("invalid credentials")
-      
+console.log(data)
+this.api.viewproduct().subscribe(
+  (response:any)=>
+  {
+    console.log(response)
+    if(response.length==0)
+    {
+      alert("no data")
     }
+    else
+    {
+      this.searchdata=response
+    }
+  }
+)
   }
 
 }
+
+
+
+

@@ -21,4 +21,8 @@ export class ApiService {
   {
     return this.http.post("http://localhost:8080/search",datatosend)
   }
+  regValues=(datatosend:any)=>
+  {
+    return this.http.post("http://localhost:8080/reg",datatosend)
+  }
 }

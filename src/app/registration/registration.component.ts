@@ -13,22 +13,26 @@ export class RegistrationComponent {
   phno=""
   username=""
   password=""
+  cpass=""
 
 
   constructor(private api:ApiService) {}
 
   regValues=()=>
   {
-    let data:any={"name":this.name,"address":this.address,"email":this.email,"phno":this.phno,"username":this.username,"password":this.password}
+    if(this.password==this.cpass){
+      alert("Registered Successfully")
+    
+    let data:any={"name":this.name,"address":this.address,"email":this.email,"phno":this.phno,"username":this.username,"password":this.password,"cpass":this.cpass}
     console.log(data)
-    this.api.addproduct(data).subscribe(
+    this.api.regValues(data).subscribe(
       (response:any)=>
       {
         console.log(response)
         if(response.status=="success")
         {
           alert("added")
-          this.name="",this.address="",this.email="",this.phno="",this.username="",this.password=""
+          this.name="",this.address="",this.email="",this.phno="",this.username="",this.password="",this.cpass=""
         }
         else
         {
@@ -36,6 +40,10 @@ export class RegistrationComponent {
         }
       }
     )
+    }
+    else{
+      alert("Password and confirm password not match")
+    }
   }
 
 }
