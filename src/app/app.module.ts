@@ -5,7 +5,19 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AddComponent } from './add/add.component';
 import { AdminloginComponent } from './adminlogin/adminlogin.component';
-
+import { RouterModule, Routes } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http'
+const myRoute:Routes=[
+  {
+    path:"",
+    component:AdminloginComponent
+  },
+  {
+    path:"add",
+    component:AddComponent
+  }
+]
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,7 +26,10 @@ import { AdminloginComponent } from './adminlogin/adminlogin.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(myRoute),
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
