@@ -12,7 +12,7 @@ export class UserloginComponent {
   constructor(private api:ApiService) {}
   username=""
   password=""
-  searchdata:any=[]
+  ldata:any=[]
   loginValues=()=>
   {
     let data:any={
@@ -29,7 +29,7 @@ this.api.viewproduct().subscribe(
     }
     else
     {
-      this.searchdata=response
+      this.ldata=response
     }
   }
 )
