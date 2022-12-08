@@ -28,4 +28,9 @@ export class ApiService {
   loginUser = (data:any)=>{
     return this.http.post("http://localhost:8080/login", data)
   }
+  addLogin=(dataToSend:any)=>
+  {
+    return this.http.post("http://localhost:8080/login",dataToSend)
+  }
+
 }
