@@ -28,7 +28,7 @@ export class Userlogin2Component {
           this.password=""
         } else {
           this.searchUser=response;
-          this.router.navigate(['/view'])
+          this.router.navigate(['/userview'])
         }
        
        
