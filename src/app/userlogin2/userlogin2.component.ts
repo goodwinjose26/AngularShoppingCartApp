@@ -31,7 +31,7 @@ export class Userlogin2Component {
           let userid=response.userid
           console.log(userid)
           localStorage.setItem("userInfo",userid)
-          this.router.navigate(['/userview'])
+          this.router.navigate(['/profileview'])
         }
        
        
