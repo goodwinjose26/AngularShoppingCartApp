@@ -22,18 +22,19 @@ export class Userlogin2Component {
       (response:any)=>
       {
         console.log(response)
-        if (response.length==0) {
-          alert("invalid email or password")
-          this.username=""
-          this.password=""
-        } else {
-          this.searchUser=response;
+        this.username=""
+        this.password=""
+        if(response.status=="success")
+        {
           let userid=response.userid
           console.log(userid)
-          localStorage.setItem("userInfo",userid)
-          this.router.navigate(['/profileview'])
+             localStorage.setItem("userInfo",userid)
+             this.router.navigate(['/profileview'])
+           
         }
-       
+        else{
+          alert(response.message)
+        }
        
       }
     )
