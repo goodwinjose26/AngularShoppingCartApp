@@ -28,6 +28,9 @@ export class Userlogin2Component {
           this.password=""
         } else {
           this.searchUser=response;
+          let userid=response.userid
+          console.log(userid)
+          localStorage.setItem("userInfo",userid)
           this.router.navigate(['/userview'])
         }
        
